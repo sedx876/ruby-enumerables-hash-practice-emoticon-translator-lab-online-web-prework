@@ -1,6 +1,7 @@
 # require modules here
 
 def load_library
+  if File.exist?(file_path)
   emoticons = YAML.load_file(file_path)
 end
 
