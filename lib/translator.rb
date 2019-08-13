@@ -14,7 +14,11 @@ end
   end
 end	
 
-
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file_path, emoticon)
+  library = load_library(file_path)
+  if library["get_meaning"][emoticon]
+    library["get_meaning"][emoticon]
+  else
+    return "Sorry, that emoticon was not found"
+  end
 end
